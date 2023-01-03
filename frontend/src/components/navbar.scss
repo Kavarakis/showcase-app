@@ -1,0 +1,30 @@
+.navbarMain {
+  background-color: 'red';
+  z-index: 2;
+}
+.navbar-expand-sm .navbar-nav .nav-link {
+  font: normal normal bold 13px/16px Josefin Sans;
+  letter-spacing: 1.95px;
+  color: #221f20;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.navbar-expand {
+  padding: 0;
+}
+.offerBanner {
+  text-align: left;
+  font: normal normal bold 11px/13px Josefin Sans;
+  letter-spacing: 1.65px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+  background: #8db9ca 0% 0% no-repeat padding-box;
+}
+// .fix-top {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   z-index: 1030;
+// }

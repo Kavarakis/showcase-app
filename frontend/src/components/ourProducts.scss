@@ -1,0 +1,82 @@
+.b-product {
+  border: 1px solid var(--unnamed-color-221f20);
+  border: 1px solid #221f20;
+  border-radius: 26px;
+  opacity: 1;
+  background-color: transparent;
+  text-align: center;
+  font: normal normal bold 12px/62px Josefin Sans;
+  letter-spacing: 1.8px;
+  color: #221f20;
+  text-transform: uppercase;
+  opacity: 1;
+  padding: 0;
+}
+.image-fit {
+  object-fit: cover;
+  background-image: url('./travelPress-left.png');
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container_img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-wrapper {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.img-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-wrapper .img-hover {
+  display: none;
+}
+.img-wrapper:hover .img-hover {
+  display: block;
+}
+.img-wrapper:hover img {
+  display: none;
+}
+
+.title {
+  color: var(--unnamed-color-221f20);
+  text-align: center;
+  font: normal normal bold 40px/43px Barlow Condensed;
+  letter-spacing: 0.8px;
+  color: #221f20;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.product-title {
+  text-align: left;
+  font: normal normal bold 22px/50px Josefin Sans;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.img-hover .btn-primary {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #ffffff;
+  border-radius: 26px;
+  opacity: 0.75;
+  color: var(--unnamed-color-221f20);
+  text-align: center;
+  font: normal normal bold 12px/50px Josefin Sans;
+  letter-spacing: 1.8px;
+  color: #221f20;
+  text-transform: uppercase;
+  opacity: 1;
+  height: 50px;
+}
