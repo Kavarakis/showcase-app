@@ -22,7 +22,7 @@ export default class CoffeeLife extends React.Component {
   render(): React.ReactNode {
     return (
       <div className="container-fluid mx-0 px-0">
-        {/* <Parallax strength={600}>
+        <Parallax strength={600}>
           <Background className="custom-bg">
             <div
               style={{
@@ -33,73 +33,83 @@ export default class CoffeeLife extends React.Component {
                 height: '100vh',
               }}
             >
-              <div className="container-fluid text-center container-cl">
-                <Row className="my-5 py-5 mx-5">
-                  <Col>
-                    <LazyLoadImage
-                      src={leftTop}
-                      placeholderSrc={leftTop_p}
-                      height={326}
-                      width={246}
-                      effect="blur"
-                    ></LazyLoadImage>
-                    <Row
-                      className="mx-5  align-items-center justify-content-center"
-                      style={{ position: 'absolute', paddingLeft: '20%' }}
+              {' '}
+              <div>
+                <Row className="mx-5 px-5 my-5 py-5">
+                  <Col className="">
+                    <div
+                      className=""
+                      style={{
+                        position: 'absolute',
+                        zIndex: 50000,
+                        paddingLeft: '25%',
+                        paddingTop: '20%',
+                      }}
                     >
                       <LazyLoadImage
                         src={leftMid}
                         placeholderSrc={leftMid_p}
-                        height={264}
-                        width={264}
+                        height={'72%'}
+                        width={'72%'}
                         effect="blur"
                       ></LazyLoadImage>
-                    </Row>
-                    <div className="setBottom my-5 ">
-                      <LazyLoadImage
-                        src={leftBot}
-                        placeholderSrc={leftBot_p}
-                        height={302}
-                        width={420}
-                        effect="blur"
-                      ></LazyLoadImage>
+                    </div>
+                    <div>
+                      <div>
+                        <LazyLoadImage
+                          src={leftTop}
+                          placeholderSrc={leftTop_p}
+                          height={'70%'}
+                          width={'60%'}
+                          effect="blur"
+                        ></LazyLoadImage>
+                      </div>
+
+                      <div className="my-5 py-5">
+                        <LazyLoadImage
+                          src={leftBot}
+                          placeholderSrc={leftBot_p}
+                          height={'70%'}
+                          width={'80%'}
+                          effect="blur"
+                        ></LazyLoadImage>
+                      </div>
                     </div>
                   </Col>
-                  <Col className="col-md-2"></Col>
-                  <Col>
-                    <div
-                      style={{
-                        position: 'absolute',
-                        paddingLeft: '10%',
-                        paddingTop: '5%',
-                      }}
-                    >
-                      <LazyLoadImage
-                        src={rightMid}
-                        placeholderSrc={rightMid_p}
-                        height={304}
-                        width={231}
-                        effect="blur"
-                      ></LazyLoadImage>
-                    </div>
-                    <Row style={{ paddingLeft: '60%' }}>
-                      <LazyLoadImage
-                        src={rightTop}
-                        placeholderSrc={rightTop_p}
-                        height={158}
-                        width={119}
-                        effect="blur"
-                      ></LazyLoadImage>
+                  <Col className=" my-5 py-5 align-items-end justify-content-end">
+                    <Row>
+                      <div
+                        style={{ paddingLeft: '15%' }}
+                        className='align-items-end justify-content-end"'
+                      >
+                        <div
+                          style={{
+                            position: 'absolute',
+                            paddingLeft: '12%',
+                            paddingBottom: '10%',
+                          }}
+                        >
+                          <div>
+                            <LazyLoadImage
+                              src={rightMid}
+                              placeholderSrc={rightMid_p}
+                              height={'90%'}
+                              width={'80%'}
+                              effect="blur"
+                            ></LazyLoadImage>
+                          </div>
+                        </div>
+                        <div style={{ paddingLeft: '1%', paddingTop: '50%' }}>
+                          <LazyLoadImage
+                            src={rightBot}
+                            placeholderSrc={rightBot_p}
+                            height={'90%'}
+                            width={'90%'}
+                            effect="blur"
+                          ></LazyLoadImage>
+                        </div>
+                      </div>
                     </Row>
-                    <div className="setBottom  py-5 mt-5 me-5 ">
-                      <LazyLoadImage
-                        src={rightBot}
-                        placeholderSrc={rightBot_p}
-                        height={364}
-                        width={520}
-                        effect="blur"
-                      ></LazyLoadImage>
-                    </div>
                   </Col>
                 </Row>
               </div>
@@ -132,80 +142,7 @@ export default class CoffeeLife extends React.Component {
               </Col>
             </Row>
           </div>
-        </Parallax> */}
-
-        <div
-          className="container-fluid"
-          style={{
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            width: '100vw',
-            height: '100vh',
-          }}
-        >
-          <Row className=" my-5 py-5">
-            <Col className="">
-              <div>
-                <div
-                  className=""
-                  style={{
-                    position: 'absolute',
-
-                    // paddingLeft: '20%',
-                    // paddingTop: '20%',
-                  }}
-                >
-                  <LazyLoadImage
-                    src={leftMid}
-                    placeholderSrc={leftMid_p}
-                    height={'50%'}
-                    width={'70%'}
-                    effect="blur"
-                  ></LazyLoadImage>
-                </div>
-                <div>
-                  <div>
-                    <LazyLoadImage
-                      src={leftTop}
-                      placeholderSrc={leftTop_p}
-                      height={'70%'}
-                      width={'60%'}
-                      effect="blur"
-                    ></LazyLoadImage>
-                  </div>
-
-                  <div className="my-5 py-5">
-                    <LazyLoadImage
-                      src={leftBot}
-                      placeholderSrc={leftBot_p}
-                      height={'70%'}
-                      width={'80%'}
-                      effect="blur"
-                    ></LazyLoadImage>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col className="">
-              {/* <LazyLoadImage
-                src={rightMid}
-                placeholderSrc={rightMid_p}
-                height={'80%'}
-                width={'75%'}
-                effect="blur"
-              ></LazyLoadImage>
-
-              <LazyLoadImage
-                src={rightBot}
-                placeholderSrc={rightBot_p}
-                height={'80%'}
-                width={'80%'}
-                effect="blur"
-              ></LazyLoadImage> */}
-            </Col>
-          </Row>
-        </div>
+        </Parallax>
       </div>
     );
   }
