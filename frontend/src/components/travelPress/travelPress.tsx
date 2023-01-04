@@ -1,8 +1,8 @@
 import React from 'react';
 import { Col, Button, Row } from 'react-bootstrap';
-import travelPressPic from '../assets/travelPress.png';
-import travelPressPic2 from '../assets/right-bot-cl.png';
-import travelPressPic3 from '../assets/travelPress2.png';
+import travelPressPic from '../../assets/travelPress.png';
+import travelPressPic2 from '../../assets/right-bot-cl.png';
+import travelPressPic3 from '../../assets/travelPress2.png';
 
 import './travelPress.scss';
 

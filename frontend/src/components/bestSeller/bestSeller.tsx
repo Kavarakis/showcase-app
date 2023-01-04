@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Carousel, Col, Stack } from 'react-bootstrap';
-import { Articles, articles, Rating } from '../utils/bestSellingData';
-import star from '../assets/star.svg';
+import { Articles, articles, Rating } from '../../utils/bestSellingData';
+import star from '../../assets/star.svg';
 import './bestSeller.scss';
 
 export type stateData = { counter: number; cards: JSX.Element[] };
@@ -46,7 +46,7 @@ export default class BestSellersComponent extends React.Component<
             <img className="card-img-top" src={x.img_src} alt="" />
             <Card.Body>
               {this.setRatings(x.stars)}
-              <Card.Title>Card title: {x.title + ' ' + c}</Card.Title>
+              <Card.Title>{x.title + c}</Card.Title>
               <Card.Text>{x.price}</Card.Text>
             </Card.Body>
           </Card>
@@ -58,8 +58,8 @@ export default class BestSellersComponent extends React.Component<
     return (
       <div className="container">
         <div className="row text-center my-5 ">
-          <div className="title1 pb-1"> pour your best cup with</div>
-          <div className="title2">our best sellers</div>
+          <div className="title-1 pb-1"> pour your best cup with</div>
+          <div className="title-2">our best sellers</div>
         </div>
         <div className="row">
           <Carousel

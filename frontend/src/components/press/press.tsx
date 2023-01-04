@@ -1,15 +1,15 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import pastLogo from '../assets/past logo.svg';
-import hgLogo_p from '../assets/homegrounds logo.png';
-import hgLogo from '../assets/homegrounds logo@2x.png';
-import msLogo_p from '../assets/martha stewart logo.png';
-import msLogo from '../assets/martha stewart logo@2x.png';
-import bfLogo_p from '../assets/buzzfeed logo.png';
-import bfLogo from '../assets/buzzfeed logo@2x.png';
-import fsLogo_p from '../assets/fastcompany logo.png';
-import fsLogo from '../assets/fastcompany logo@2x.png';
+import pastLogo from '../../assets/past logo.svg';
+import hgLogo_p from '../../assets/homegrounds logo.png';
+import hgLogo from '../../assets/homegrounds logo@2x.png';
+import msLogo_p from '../../assets/martha stewart logo.png';
+import msLogo from '../../assets/martha stewart logo@2x.png';
+import bfLogo_p from '../../assets/buzzfeed logo.png';
+import bfLogo from '../../assets/buzzfeed logo@2x.png';
+import fsLogo_p from '../../assets/fastcompany logo.png';
+import fsLogo from '../../assets/fastcompany logo@2x.png';
 
 import './press.scss';
 

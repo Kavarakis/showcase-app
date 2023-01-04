@@ -1,4 +1,6 @@
-.title1 {
+@import '../../variables.scss';
+
+.sub-header {
   text-align: center;
   font: normal normal bold 12px/25px Josefin Sans;
   letter-spacing: 1.2px;
@@ -6,7 +8,7 @@
   text-transform: uppercase;
   opacity: 1;
 }
-.mainTitle {
+.main-header {
   text-align: center;
   font: normal normal bold 48px/52px Barlow Condensed;
   letter-spacing: 0px;
@@ -14,14 +16,38 @@
   text-transform: uppercase;
   opacity: 1;
 }
-.p1 {
+.p-style {
   text-align: center;
   font: normal normal normal 16px/25px Nunito;
   letter-spacing: 0px;
   color: #221f20;
 }
+.svg-size {
+  width: 50px;
+  height: 700px;
+}
 .setBottom {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+@media screen and (max-width: $large-phone) {
+  .sub-header {
+    font-size: 1rem;
+  }
+  .main-header {
+    font-size: 2rem;
+  }
+  .p-style {
+    font-size: 1rem;
+    margin: 10%;
+  }
+  .svg-size {
+    display: none;
+  }
+  .custom-bg {
+    display: none;
+  }
+}
+@media screen and (max-width: $large-phone) {
 }

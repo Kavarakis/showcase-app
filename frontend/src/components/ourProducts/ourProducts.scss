@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .b-product {
   border: 1px solid var(--unnamed-color-221f20);
   border: 1px solid #221f20;
@@ -21,6 +23,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 .img-wrapper .img-hover {
   display: none;
@@ -28,6 +31,7 @@
 .img-wrapper:hover .img-hover {
   display: block;
 }
+
 .img-wrapper:hover img {
   display: none;
 }

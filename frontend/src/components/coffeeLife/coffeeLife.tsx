@@ -1,15 +1,15 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import leftTop_p from '../assets/left-top-cl.png';
-import leftTop from '../assets/left-top-cl-2.png';
-import leftMid_p from '../assets/left-mid-cl.png';
-import leftMid from '../assets/left-mid-cl-2.png';
-import leftBot from '../assets/left-bot-cl-2.png';
-import leftBot_p from '../assets/left-bot-cl.png';
-import rightMid from '../assets/right-mid-cl-2.png';
-import rightMid_p from '../assets/right-mid-cl.png';
-import rightBot from '../assets/right-bot-cl-2.png';
-import rightBot_p from '../assets/right-bot-cl.png';
+import leftTop_p from '../../assets/left-top-cl.png';
+import leftTop from '../../assets/left-top-cl-2.png';
+import leftMid_p from '../../assets/left-mid-cl.png';
+import leftMid from '../../assets/left-mid-cl-2.png';
+import leftBot from '../../assets/left-bot-cl-2.png';
+import leftBot_p from '../../assets/left-bot-cl.png';
+import rightMid from '../../assets/right-mid-cl-2.png';
+import rightMid_p from '../../assets/right-mid-cl.png';
+import rightBot from '../../assets/right-bot-cl-2.png';
+import rightBot_p from '../../assets/right-bot-cl.png';
 import { Parallax, Background } from 'react-parallax';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import './coffeeLife.scss';
@@ -113,30 +113,29 @@ export default class CoffeeLifeComponent extends React.Component {
             <Row className="justify-content-center mt-5 pt-5">
               <Col md={3} className="justify-content-center ">
                 <div className="text-center">
-                  <div className="title1">designed for real life</div>
-                  <div className="mainTitle">
+                  <div className="sub-header">designed for real life</div>
+                  <div className="main-header">
                     Coffee made for your life on the go.
                   </div>
-                  <div className="p1">
-                    <p>
+                  <div>
+                    <div className="p-style">
                       We understand coffee is a big part of your busy, active
                       life. That’s why we create and develop products that allow
                       you to bring your passion for coffee-when you want it- and
                       wherever life takes you.
-                    </p>
+                    </div>
                     <svg
+                      className="svg-size"
                       version="1.1"
                       id="line_2"
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="50px"
-                      height="700px"
                     >
                       <path
                         className="path-vert"
                         fill="#01a09e"
-                        stroke-width="3"
+                        strokeWidth="3"
                         stroke="#01a09e"
                         d="M30 0 v600 400"
                       />

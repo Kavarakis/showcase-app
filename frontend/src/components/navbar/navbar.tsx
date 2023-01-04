@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
-import esproLogo from '../assets/espro_logo.svg';
+import esproLogo from '../../assets/espro_logo.svg';
 import './navbar.scss';
 
 export default class NavbarComponent extends React.Component {
@@ -9,7 +9,7 @@ export default class NavbarComponent extends React.Component {
       <div className="px-0 py-0 fixed-top">
         <div id="offerBanner">
           <Navbar>
-            <Row className="container-fluid py-2 text-center offerBanner">
+            <Row className="container-fluid py-2 text-center offer-banner">
               <div className="py-">FREE SHIPPING ON ALL U.S. ORDERS $49+</div>
             </Row>
           </Navbar>

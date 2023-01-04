@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .main {
   background-position: center;
   background-size: cover;
@@ -5,20 +7,8 @@
   width: 100vw;
   height: 100vh;
 }
-.welcomeButton {
-  border-radius: 26px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  text-align: center;
-  //   font: Josefin Sans, Bold;
-  letter-spacing: 1.8px;
-  color: #221f20;
-  text-transform: uppercase;
-  opacity: 1;
-  border: #ffffff;
-  font-size: medium;
-}
 
-.exploreB {
+.explore-b {
   text-align: center;
   font: normal normal bold 14px/18px Josefin Sans;
   letter-spacing: 2.1px;
@@ -106,7 +96,17 @@
   color: #ffffff;
   opacity: 1;
 }
-.pourB {
+
+@media screen and (max-width: $large-phone) {
+  .main-title {
+    font-size: 4rem;
+  }
+  .sub-title {
+    font-size: 1.2rem;
+  }
+}
+
+.pour-b {
   text-align: center;
   font: normal normal bold 12px/14px Josefin Sans;
   letter-spacing: 1.8px;
@@ -120,6 +120,6 @@
   padding-left: 25px;
   padding-right: 25px;
 }
-.pourB:hover {
+.pour-b:hover {
   border-radius: 15px;
 }
