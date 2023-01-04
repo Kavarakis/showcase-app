@@ -2,15 +2,9 @@ import React from 'react';
 import { Button, Col, Container, Stack, Row } from 'react-bootstrap';
 import backImage from '../assets/welcome_back_2x.png';
 import backImagePlaceHolder from '../assets/welcome_back.png';
-import arrowImg from './arrow-right-short.svg';
+import arrowImg from '../assets/arrow-right-short.svg';
 import './welcome.scss';
-const divStyle = {
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  width: '100vw',
-  height: '100vh',
-};
+
 export default class WelcomeComponent extends React.Component<
   {},
   { backImg: string }
@@ -21,13 +15,13 @@ export default class WelcomeComponent extends React.Component<
       backImg: backImagePlaceHolder,
     };
   }
-  handleExploreClick = () => {
+  handleExploreClick(): void {
     const element = document.getElementById('BestSellers');
     if (element) {
       element.scrollIntoView(true);
     }
-  };
-  componentDidMount() {
+  }
+  componentDidMount(): void {
     this.setState({ backImg: backImage });
   }
   componentWillUnmount(): void {
@@ -63,7 +57,7 @@ export default class WelcomeComponent extends React.Component<
               </Col>
             </Row>
           </Col>
-          <div className="position-absolute " style={{ bottom: 0 }}>
+          <div className="position-absolute" style={{ bottom: 0 }}>
             <Container>
               <Stack
                 direction="horizontal"
@@ -86,29 +80,4 @@ export default class WelcomeComponent extends React.Component<
       </div>
     );
   }
-}
-
-{
-  /* <div className="container align-items-center">
-<div className=" row display-3 justify-content-center">
-  BREW ANYWHERE. BE ANYWHERE.
-</div>
-<div className="row col-md-8 mx-auto center-block text-center">
-  <p className="fs-5 mt-2">
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-    erat, sed diam voluptua. At vero eos et accusam et justo duo.
-  </p>
-</div>
-<div className="row  col-md-2 mx-auto px-auto">
-  <Button size="lg" className="welcomeButton">
-    pour on the go
-  </Button>
-</div>
-</div>
-<div className="container">
-<div className="row col-md-1 mx-auto">
-  <Button>explore</Button>
-</div>
-</div> */
 }

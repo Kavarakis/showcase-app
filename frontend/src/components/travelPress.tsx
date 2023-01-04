@@ -1,26 +1,32 @@
 import React from 'react';
-import { Col, Button, Row, Card, Carousel } from 'react-bootstrap';
-import travelPressPic from './travelPress.png';
+import { Col, Button, Row } from 'react-bootstrap';
+import travelPressPic from '../assets/travelPress.png';
 import travelPressPic2 from '../assets/right-bot-cl.png';
-import travelPressPic3 from './travelPress2.png';
+import travelPressPic3 from '../assets/travelPress2.png';
 
 import './travelPress.scss';
 
-export default class TravelPress extends React.Component<
+export type stateData = { picPath: string; intervalId: number | null };
+export default class TravelPressComponent extends React.Component<
   {},
-  { picPath: string }
+  stateData
 > {
-  setPicturePath: string = travelPressPic;
-  arr = [travelPressPic, travelPressPic2, travelPressPic3];
+  private arr = [travelPressPic, travelPressPic2, travelPressPic3];
   constructor(props: {}) {
     super(props);
-    this.state = { picPath: travelPressPic };
+    this.state = { picPath: travelPressPic, intervalId: null };
   }
   componentDidMount(): void {
-    window.setInterval(() => {
+    let i_id: number = window.setInterval(() => {
       this.arr.push(this.state.picPath);
       this.setState({ picPath: this.arr.shift() as string });
     }, 1000);
+    this.setState({ intervalId: i_id });
+  }
+  componentWillUnmount(): void {
+    if (this.state.intervalId) {
+      window.clearInterval(this.state.intervalId);
+    }
   }
   render(): React.ReactNode {
     return (

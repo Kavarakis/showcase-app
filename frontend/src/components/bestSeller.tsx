@@ -1,29 +1,27 @@
 import React from 'react';
 import { Card, Carousel, Col, Stack } from 'react-bootstrap';
 import { Articles, articles, Rating } from '../utils/bestSellingData';
-import './bestSeller.scss';
 import star from '../assets/star.svg';
+import './bestSeller.scss';
 
-export default class BestSellers extends React.Component<any, any> {
-  constructor(props: any) {
+export type stateData = { counter: number; cards: JSX.Element[] };
+
+export default class BestSellersComponent extends React.Component<
+  {},
+  stateData
+> {
+  constructor(props: {}) {
     super(props);
     this.state = {
       counter: 0,
       cards: [],
-    };
+    } as stateData;
   }
-  updateState() {
+  private updateState(): void {
     this.setState({ cards: this.getCards(this.state.counter) });
     this.setState({ counter: this.state.counter + 1 });
   }
-  componentDidMount(): void {
-    const element = document.getElementById('offerBanner');
-    if (element) {
-      element.remove();
-    }
-    this.updateState();
-  }
-  setRatings(ratings: Rating) {
+  private setRatings(ratings: Rating): JSX.Element[] {
     let i = 0;
     const res = [];
     while (i < Number(ratings)) {
@@ -32,8 +30,15 @@ export default class BestSellers extends React.Component<any, any> {
     }
     return res;
   }
+  componentDidMount(): void {
+    const element = document.getElementById('offerBanner');
+    if (element) {
+      element.remove();
+    }
+    this.updateState();
+  }
 
-  getCards(c: number) {
+  getCards(c: number): JSX.Element[] {
     return articles.map((x: Articles, i: number) => {
       return (
         <Col className="col-hover" key={i}>

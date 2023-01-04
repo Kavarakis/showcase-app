@@ -1,28 +1,23 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import './coffeeLife.scss';
 import leftTop_p from '../assets/left-top-cl.png';
 import leftTop from '../assets/left-top-cl-2.png';
 import leftMid_p from '../assets/left-mid-cl.png';
 import leftMid from '../assets/left-mid-cl-2.png';
 import leftBot from '../assets/left-bot-cl-2.png';
 import leftBot_p from '../assets/left-bot-cl.png';
-
 import rightMid from '../assets/right-mid-cl-2.png';
 import rightMid_p from '../assets/right-mid-cl.png';
-
-import rightTop from '../assets/right-top-cl-2.png';
-import rightTop_p from '../assets/right-top-cl.png';
 import rightBot from '../assets/right-bot-cl-2.png';
 import rightBot_p from '../assets/right-bot-cl.png';
-
 import { Parallax, Background } from 'react-parallax';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-export default class CoffeeLife extends React.Component {
+import './coffeeLife.scss';
+export default class CoffeeLifeComponent extends React.Component {
   render(): React.ReactNode {
     return (
       <div className="container-fluid mx-0 px-0">
-        <Parallax strength={600}>
+        <Parallax strength={500}>
           <Background className="custom-bg">
             <div
               style={{
@@ -41,7 +36,6 @@ export default class CoffeeLife extends React.Component {
                       className=""
                       style={{
                         position: 'absolute',
-                        zIndex: 50000,
                         paddingLeft: '25%',
                         paddingTop: '20%',
                       }}

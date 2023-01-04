@@ -12,22 +12,6 @@
   opacity: 1;
   padding: 0;
 }
-.image-fit {
-  object-fit: cover;
-  background-image: url('./travelPress-left.png');
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.container_img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 .img-wrapper {
   height: 100%;
   width: 100%;
@@ -38,7 +22,6 @@
   width: 100%;
   object-fit: cover;
 }
-
 .img-wrapper .img-hover {
   display: none;
 }
@@ -48,7 +31,6 @@
 .img-wrapper:hover img {
   display: none;
 }
-
 .title {
   color: var(--unnamed-color-221f20);
   text-align: center;

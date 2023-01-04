@@ -1,6 +1,6 @@
 .back-left {
   object-fit: cover;
-  background-image: url('./travelPress-left.png');
+  background-image: url('../assets/travelPress-left.png');
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,6 +53,5 @@
 .changing-item img {
   width: 100%;
   height: 100%;
-  // object-fit: fill;
   object-fit: cover;
 }

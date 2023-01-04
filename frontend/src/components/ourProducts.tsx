@@ -1,28 +1,20 @@
 import React from 'react';
-import { Button, Card, Col, Row, Stack } from 'react-bootstrap';
-import frenchPressPic from './frenchPress-op.png';
-import frenchPressHover from './frenchPressHover-op.png';
-import pourOverPic from './pourOver-op.png';
-import pourOverHover from './pourOverHover-op.png';
-import coldBrewPic from './coldBrew-op.png';
-import coldBrewHover from './coldBrewHover-op.png';
-
+import { Col, Row, Stack } from 'react-bootstrap';
+import frenchPressPic from '../assets/frenchPress-op.png';
+import frenchPressHover from '../assets/frenchPressHover-op.png';
+import pourOverPic from '../assets/pourOver-op.png';
+import pourOverHover from '../assets/pourOverHover-op.png';
+import coldBrewPic from '../assets/coldBrew-op.png';
+import coldBrewHover from '../assets/coldBrewHover-op.png';
 import './ourProducts.scss';
-const divStyle = {
-  backgroundImage: `url(${coldBrewPic})`,
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  width: '100vw',
-  height: '100vh',
-};
-export default class OurProducts extends React.Component {
-  generateProduct(
+
+export default class OurProductsComponent extends React.Component {
+  private generateProduct(
     firstPic: string,
     hoverPic: string,
     title: string,
     backColor: string,
-  ) {
+  ): JSX.Element {
     return (
       <Col className="h-100 img-wrapper" style={{ backgroundColor: backColor }}>
         <div className="position-absolute product-title my-2 pt-3 mx-3 px-3">
