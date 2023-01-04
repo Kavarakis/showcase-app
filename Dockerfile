@@ -4,9 +4,10 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm ci && npm cache clean --force
 COPY  . .
-RUN npm run build
 # This is needed for Prisma ORM.
 RUN npx prisma generate
+
+RUN npm run build
 
 FROM node:16.13-alpine As production
 ENV NODE_ENV production
