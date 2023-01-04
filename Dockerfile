@@ -2,7 +2,7 @@ FROM node:16.3-alpine As build
 WORKDIR /usr/src/app
 # Copy package files
 COPY package*.json ./
-RUN npm ci --only=production && npm cache clean --force
+RUN npm ci && npm cache clean --force
 COPY  . .
 RUN npm run build
 # This is needed for Prisma ORM.
