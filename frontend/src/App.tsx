@@ -8,12 +8,18 @@ import OurProductsComponent from './components/ourProducts';
 import TravelPress from './components/travelPress';
 import { InView } from 'react-intersection-observer';
 import './App.scss';
+import PressComponent from './components/press';
+import FreshGroundsComponent from './components/freshGrounds';
 
 export default class App extends React.Component {
   wrapComponentInView(c: React.ReactElement) {
     return (
       <InView triggerOnce={true} delay={150}>
-        {({ inView, ref }) => <div ref={ref}>{inView ? c : ''}</div>}
+        {({ inView, ref }) => (
+          <div ref={ref} className="px-0">
+            {inView ? c : ''}
+          </div>
+        )}
       </InView>
     );
   }
@@ -35,6 +41,8 @@ export default class App extends React.Component {
             {this.wrapComponentInView(<OurProductsComponent />)}
           </Row>
           <Row>{this.wrapComponentInView(<TravelPress />)}</Row>
+          <Row> {this.wrapComponentInView(<PressComponent />)}</Row>
+          <Row> {this.wrapComponentInView(<FreshGroundsComponent />)}</Row>
         </Container>
       </div>
     );

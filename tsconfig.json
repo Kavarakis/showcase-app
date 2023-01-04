@@ -1,4 +1,6 @@
 {
+  "exclude": ["frontend"],
+  "include": ["src/**/*", "prisma/**/*"],
   "compilerOptions": {
     "module": "commonjs",
     "declaration": true,
