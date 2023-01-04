@@ -30,7 +30,7 @@ export default class WelcomeComponent extends React.Component<
   render(): React.ReactNode {
     return (
       <div
-        className="main"
+        className=" container-fluid main"
         style={{ backgroundImage: `url(${this.state.backImg})` }}
       >
         <div className="container h-100 d-flex align-items-center justify-content-center mx-auto">
@@ -57,26 +57,29 @@ export default class WelcomeComponent extends React.Component<
               </Col>
             </Row>
           </Col>
-          <div className="position-absolute" style={{ bottom: 0 }}>
-            <Container>
-              <Stack
-                direction="horizontal"
-                className="h-100 justify-content-center align-items-center"
+          {/* <div className="position-absolute setBottom" style={{ bottom: 0 }}> */}
+          <Container
+            className="position-absolute fixed-bottom"
+            // style={{ bottom: 0 }}
+          >
+            <Stack
+              direction="horizontal"
+              className="h-100 justify-content-center align-items-center"
+            >
+              <Button
+                className="bg-transparent border-0 exploreB"
+                onClick={this.handleExploreClick}
               >
-                <Button
-                  className="bg-transparent border-0 exploreB"
-                  onClick={this.handleExploreClick}
-                >
-                  EXPLORE
-                </Button>
+                EXPLORE
+              </Button>
 
-                <div className="bounce">
-                  <img src={arrowImg} alt="" />
-                </div>
-              </Stack>
-            </Container>
-          </div>
+              <div className="bounce">
+                <img src={arrowImg} alt="" />
+              </div>
+            </Stack>
+          </Container>
         </div>
+        {/* </div> */}
       </div>
     );
   }

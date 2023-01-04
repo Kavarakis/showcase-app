@@ -124,13 +124,23 @@ export default class CoffeeLifeComponent extends React.Component {
                       you to bring your passion for coffee-when you want it- and
                       wherever life takes you.
                     </p>
-                    <div className="display-1"> HELLO!</div>
-                    <div className="display-1"> HELLO!</div>
-                    <div className="display-1"> HELLO!</div>
-                    <div className="display-1"> HELLO!</div>
-                    <div className="display-1"> HELLO!</div>
-                    <div className="display-1"> HELLO!</div>
-                    <div className="display-1"> HELLO!</div>
+                    <svg
+                      version="1.1"
+                      id="line_2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      width="50px"
+                      height="700px"
+                    >
+                      <path
+                        className="path-vert"
+                        fill="#01a09e"
+                        stroke-width="3"
+                        stroke="#01a09e"
+                        d="M30 0 v600 400"
+                      />
+                    </svg>
                   </div>
                 </div>
               </Col>
