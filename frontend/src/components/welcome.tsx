@@ -30,7 +30,7 @@ export default class WelcomeComponent extends React.Component<
   render(): React.ReactNode {
     return (
       <div
-        className=" container-fluid main"
+        className=" main"
         style={{ backgroundImage: `url(${this.state.backImg})` }}
       >
         <div className="container h-100 d-flex align-items-center justify-content-center mx-auto">
