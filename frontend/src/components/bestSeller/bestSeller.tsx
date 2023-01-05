@@ -25,7 +25,7 @@ export default class BestSellersComponent extends React.Component<
     let i = 0;
     const res = [];
     while (i < Number(ratings)) {
-      res.push(<img src={star} alt="" />);
+      res.push(<img src={star} alt="" key={i + 'rating'} />);
       i++;
     }
     return res;
@@ -41,7 +41,7 @@ export default class BestSellersComponent extends React.Component<
   getCards(c: number): JSX.Element[] {
     return articles.map((x: Articles, i: number) => {
       return (
-        <Col className="col-hover" key={i}>
+        <Col className="col-hover" key={i + ' card'}>
           <Card style={{ border: 0 }}>
             <img className="card-img-top" src={x.img_src} alt="" />
             <Card.Body>
