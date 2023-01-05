@@ -3,10 +3,10 @@
 ## App is deployed on AWS E2
 
 Frontend:
-`3.71.90.245`
+`3.70.98.202`
 
 Backend:
-`3.71.90.245:4000`
+`3.70.98.202:4000`
 
 Existing routes on backend are documented via OpenAPI:
 
