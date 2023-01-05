@@ -5,6 +5,7 @@ import { UserService } from '../user/user.service';
 import * as bcrypt from 'bcrypt';
 import { LoginUserDto } from '../user/dto/login-user.dto';
 import { UserDataDto } from './dto/user-data.dto';
+import LoginDataDto from './dto/login-data.dto';
 
 @Injectable()
 export class AuthService {
@@ -20,7 +21,7 @@ export class AuthService {
     return null;
   }
 
-  loginWithCredentials(user: User) {
+  loginWithCredentials(user: User): LoginDataDto {
     const payload = { username: user.email, sub: user.id };
     return { access_token: this.jwtTokenService.sign(payload) };
   }

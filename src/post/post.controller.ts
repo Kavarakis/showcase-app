@@ -14,13 +14,18 @@ import {
   Query,
   UseGuards,
 } from '@nestjs/common';
+import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
+import { type } from 'os';
 import { AuthService } from '../auth/auth.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import CommentEntity from '../comment/entities/comment.entity';
+import { UserEntity } from '../user/entities/user.entity';
 import { CreatePostDto } from './dto/create-post.dto';
 import { PaginationDto } from './dto/pagination.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
+import PostEntity from './entities/post.entity';
 import { PostService } from './post.service';
-
+@ApiTags('post')
 @Controller('post')
 @UseGuards(JwtAuthGuard)
 export class PostController {
@@ -29,6 +34,7 @@ export class PostController {
     private readonly authService: AuthService,
   ) {}
   @Post()
+  @ApiOkResponse({ type: PostEntity })
   async createPost(
     @Body() data: CreatePostDto,
     @Headers('Authorization') authData: string,
@@ -38,6 +44,7 @@ export class PostController {
   }
 
   @Put(':id')
+  @ApiOkResponse({ type: PostEntity })
   async updatePost(
     @Param('id', ParseIntPipe) id: number,
     @Body() data: UpdatePostDto,
@@ -52,6 +59,7 @@ export class PostController {
   }
 
   @Get('')
+  @ApiOkResponse({ type: PostEntity })
   async getAllPosts(
     @Query(
       'limit',

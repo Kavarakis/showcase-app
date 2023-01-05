@@ -11,32 +11,37 @@ services:
     env_file:
       - .env
     restart: always
+    networks:
+      - hulk
+
   api:
-    container_name: api
+    container_name: api-app
+    depends_on:
+      - postgres
     restart: always
     build:
       context: ./
       dockerfile: ./Dockerfile
-    depends_on:
-      - postgres
     ports:
       - '4000:4000'
+    networks:
+      - hulk
   front:
     build:
       context: ./frontend
       dockerfile: ./Dockerfile
-    container_name: front
+    container_name: front-app
     ports:
-      - '5000:80'
+      - '80:80'
       - '443:443'
     depends_on:
       - api
+    networks:
+      - hulk
 volumes:
   postgres:
     driver: local
-    # networks:
-    #   - hulk
-# networks:
-#   hulk:
-#     external:
-#       name: hulknet
+networks:
+  hulk:
+    external:
+      name: hulknet

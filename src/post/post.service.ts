@@ -1,8 +1,4 @@
-import {
-  Injectable,
-  NotAcceptableException,
-  NotFoundException,
-} from '@nestjs/common';
+import { Injectable, NotAcceptableException } from '@nestjs/common';
 import { UserDataDto } from '../auth/dto/user-data.dto';
 import { PrismaService } from '../prisma/prisma.service';
 import { CreatePostDto } from './dto/create-post.dto';
