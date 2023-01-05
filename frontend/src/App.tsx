@@ -43,9 +43,6 @@ export default class App extends React.Component {
           <Row>{this.wrapComponentInView(<TravelPress />)}</Row>
           <Row> {this.wrapComponentInView(<PressComponent />)}</Row>
           <Row> {this.wrapComponentInView(<FreshGroundsComponent />)}</Row>
-          <Row>
-            <h1>SEMIR</h1>
-          </Row>
         </Container>
       </div>
     );
