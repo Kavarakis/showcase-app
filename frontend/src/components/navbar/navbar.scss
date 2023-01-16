@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .navbar-expand-lg .navbar-nav .nav-link {
   font: normal normal bold 13px/16px Josefin Sans;
   letter-spacing: 1.95px;
@@ -16,4 +18,28 @@
   text-transform: uppercase;
   opacity: 1;
   background: #8db9ca 0% 0% no-repeat padding-box;
+}
+.shopping-counter {
+  background: #659ab1;
+  border-radius: 50%;
+  font: normal normal 600 13px/16px Barlow Condensed;
+  color: #221f20;
+  opacity: 1;
+}
+@media screen and (max-width: $large-phone) {
+  .shopping-counter {
+    display: none;
+  }
+}
+.link-margin {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.brand {
+  margin-left: 7.5rem;
+}
+@media screen and (max-width: $large-phone) {
+  .brand {
+    margin-left: 0;
+  }
 }
