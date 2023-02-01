@@ -22,5 +22,5 @@ jobs:
         REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
         REMOTE_USER: ${{ secrets.DEPLOY_USER }}
         REMOTE_PORT: ${{ secrets.DEPLOY_PORT }}
-        SOURCE: "build/"
+        SOURCE: "frontend/build/"
         TARGET: ${{ secrets.DEPLOY_TARGET }}
